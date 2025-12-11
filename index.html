@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZASADY WSPÓŁPRACY - StrefaKlimy.pl</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        line-height: 1.7;
+        color: #2c3e50;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 50px 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        animation: rotate 20s linear infinite;
+      }
+
+      @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      h1 {
+        font-size: 42px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .content {
+        padding: 50px 40px;
+      }
+
+      .section-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #667eea;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        padding-left: 20px;
+        border-left: 5px solid #667eea;
+        background: linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+        padding: 12px 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .section-title:hover {
+        background: linear-gradient(90deg, rgba(102, 126, 234, 0.2) 0%, transparent 100%);
+        transform: translateX(5px);
+      }
+
+      .section-title:first-of-type {
+        margin-top: 0;
+      }
+
+      p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        color: #34495e;
+      }
+
+      ul {
+        margin: 20px 0 25px 0;
+        padding-left: 0;
+        list-style: none !important;
+        list-style-type: none !important;
+      }
+
+      li {
+        padding: 10px 20px 10px 50px;
+        margin-bottom: 8px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        position: relative;
+        transition: all 0.3s ease;
+        color: #2c3e50;
+        list-style: none !important;
+        display: block;
+      }
+
+      li:hover {
+        background: #e9ecef;
+        transform: translateX(5px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      li::before {
+        content: '✓';
+        position: absolute;
+        left: 20px;
+        color: #667eea;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      strong {
+        color: #667eea;
+        font-weight: 600;
+      }
+
+      br {
+        display: block;
+        margin: 10px 0;
+        content: "";
+      }
+
+      .footer-note {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px 40px;
+        margin-top: 40px;
+        border-radius: 10px;
+        text-align: center;
+        font-style: italic;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        body {
+          padding: 20px 10px;
+        }
+
+        .header {
+          padding: 30px 20px;
+        }
+
+        h1 {
+          font-size: 28px;
+          letter-spacing: 2px;
+        }
+
+        .content {
+          padding: 30px 20px;
+        }
+
+        .section-title {
+          font-size: 18px;
+          padding: 10px 15px;
+        }
+
+        li {
+          padding: 10px 15px 10px 40px;
+        }
+
+        li::before {
+          left: 15px;
+        }
+      }
+
+      /* Scroll animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section-title, p, ul {
+        animation: fadeInUp 0.6s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>ZASADY WSPÓŁPRACY</h1>
+      </div>
+
+      <div class="content">
+        <div class="section-title">1. Charakter współpracy</div>
+    <p>
+      Podwykonawca wykonuje wszystkie zlecenia na własną pełną odpowiedzialność, korzystając ze swojego sprzętu, swoich
+      narzędzi i własnego doświadczenia.<br />
+      Każdy montaż musi być wykonany dokładnie tak, jak opisuje to instrukcja producenta urządzenia oraz standard
+      jakości obowiązujący w mojej firmie.<br />
+      Nie ma miejsca na montaż „po swojemu", „zawsze tak robię" czy „to nie ma znaczenia".<br />
+      Jeśli coś jest w instrukcji to musi być wykonane, chyba że ustalimy ewentualne odstępstwa.
+    </p>
+
+    <div class="section-title">2. Odpowiedzialność podwykonawcy</div>
+    <p>Podwykonawca bierze 100 procent odpowiedzialności materialnej za:</p>
+    <ul>
+      <li>uszkodzenia mieszkania lub domu klienta,</li>
+      <li>błędy montażowe,</li>
+      <li>niepoprawne wykonanie instalacji,</li>
+      <li>nieszczelności, przecieki, odpadające maskownice, niewłaściwy odpływ skroplin,</li>
+      <li>konieczność ponownego przyjazdu wynikającą z jego błędu.</li>
+    </ul>
+    <p>Jeżeli montaż został wykonany nieprawidłowo podwykonawca bezdyskusyjnie poprawia to na własny koszt.</p>
+
+    <div class="section-title">3. Gwarancja jakości</div>
+    <p>
+      Podwykonawca udziela minimum 12 miesięcy gwarancji na wykonany montaż oraz osprzęt, który dostarczył (nie na
+      klimatyzator).<br />
+      Wszystkie problemy wynikające z błędu podwykonawcy muszą zostać naprawione nieodpłatnie.<br />
+      Czas reakcji na zgłoszony problem i czas poprawy:<br />
+      usunięcie usterki maksymalnie do 7 dni kalendarzowych.
+    </p>
+
+    <div class="section-title">4. Dokumentacja wymagana w dniu montażu</div>
+    <p>
+      Brak pełnej dokumentacji oznacza wstrzymanie wypłaty do momentu uzupełnienia braków.<br />
+      Wymagane jest:
+    </p>
+    <ul>
+      <li>Protokół montażu podpisany przez klienta.</li>
+      <li>Zdjęcia dokumentujące estetyczny montaż i prawidłowy montaż.</li>
+    </ul>
+    <p>Bez tych materiałów zlecenie jest traktowane jako nieukończone.</p>
+
+    <div class="section-title">5. Standard wykonania montażu</div>
+    <p>To jest absolutnie nienegocjowalne:</p>
+    <ul>
+      <li>wszystkie prace zgodne z instrukcją producenta urządzenia,</li>
+      <li>wykonanie próżni,</li>
+      <li>poprawne wykonanie odpływu skroplin zawsze ze spadkiem,</li>
+      <li>
+        estetyczne prowadzenie instalacji, staranny montaż maskownic/korytek, brak uszkodzeń ścian wynikających z
+        niedbałości lub nieuwagi,
+      </li>
+      <li>po wykonaniu prac miejsce musi być posprzątane i doprowadzone do stanu wyjściowego.</li>
+    </ul>
+    <p>Każde odstępstwo od powyższego jest błędem i musi zostać poprawione na koszt podwykonawcy.</p>
+
+    <div class="section-title">6. Zasady pracy i punktualność</div>
+    <ul>
+      <li>montaż zaczyna się o ustalonej godzinie – z reguły jest to godzina 09:00,</li>
+      <li>jeżeli podwykonawca przewiduje opóźnienie, musi zgłosić to co najmniej godzinę wcześniej,</li>
+      <li>jeżeli konieczny jest ponowny przyjazd z powodu błędu podwykonawcy, koszty są po stronie podwykonawcy.</li>
+    </ul>
+
+    <div class="section-title">7. Kontakt z klientem</div>
+    <p>Podwykonawca reprezentuje naszą firmę, dlatego musi:</p>
+    <ul>
+      <li>mówić spokojnie i rzeczowo,</li>
+      <li>unikać obietnic, których nie może spełnić,</li>
+      <li>zachowywać higienę komunikacji i kulturę osobistą,</li>
+      <li>nie negocjować cen ani zakresu prac z klientem na własną rękę.</li>
+    </ul>
+    <p>Wszelkie dodatkowe prace, zmiany zakresu, sugestie klienta są ustalane wyłącznie ze mną jako zlecającym.</p>
+
+    <div class="section-title">8. Sprzęt, narzędzia i przygotowanie</div>
+    <p>Podwykonawca pracuje na:</p>
+    <ul>
+      <li>swoich narzędziach,</li>
+      <li>swoim pojeździe,</li>
+      <li>swoim osprzęcie montażowym (chyba że ustalimy inaczej).</li>
+    </ul>
+    <p>Podwykonawca musi posiadać:</p>
+    <ul>
+      <li>ważny dokument potwierdzający uprawnienia F-GAZ dla personelu i dla przedsiębiorcy,</li>
+      <li>ubezpieczenie odpowiedzialności cywilnej na minimum sto tysięcy złotych.</li>
+    </ul>
+
+    <div class="section-title">9. Rozliczenia finansowe</div>
+    <ul>
+      <li>faktura wystawiana jest po zakończonym montażu i dostarczeniu kompletnej dokumentacji,</li>
+      <li>termin płatności wynosi do 7 dni kalendarzowych,</li>
+      <li>
+        jeżeli dokumentacja jest niepełna lub montaż posiada błędy, płatność jest wstrzymana do czasu ich usunięcia.
+      </li>
+    </ul>
+
+    <div class="section-title">10. Zasada absolutna: zero kombinowania</div>
+    <p>Współpracuję wyłącznie z ludźmi, którzy:</p>
+    <ul>
+      <li>biorą odpowiedzialność za to, co robią,</li>
+      <li>nie próbują oszukiwać,</li>
+      <li>nie próbują „robić taniej", „po swojemu", „na oko", „zleceniodawca i klient się nie zorientuje"</li>
+      <li>nie kombinują z materiałami ani czasem.</li>
+    </ul>
+    <p>
+      Jedna zasada, która zamyka dyskusję:<br />
+      Albo robisz poprawnie, uczciwie i zgodnie ze sztuką, albo nie robisz wcale.
+    </p>
+
+    <div class="section-title">
+      11. Transparentne zasady ustalania wynagrodzenia (informacja dla zainteresowanych współpracą)
+    </div>
+    <p>
+      Jeśli jesteś zainteresowany nawiązaniem współpracy na partnerskich, uczciwych zasadach, proszę przedstaw swoje
+      oczekiwania finansowe.<br />
+      Nie planuję targowania - liczy się dla mnie transparentność, odpowiedzialność i wzajemny szacunek.
+    </p>
+    <p>Będę wdzięczny za przesłanie poniższych informacji:</p>
+    
+    <p><strong>Stawki za montaż klimatyzacji</strong></p>
+    <ul>
+      <li>Stawka za podstawowy montaż klimatyzatora typu split w korytkach w mieszkaniu lub domu (instalacja do 5 metrów bez materiału lub jak wolisz z materiałem) - ……………..</li>
+      <li>Stawka za podstawowy montaż klimatyzacji typu multisplit w korytkach (2 jednostki wewnętrzne + 1 zewnętrzna) w mieszkaniu lub domu (instalacja do 8 metrów bez materiału lub jeśli wolisz z materiałem) - ……………..</li>
+      <li>Stawka za każdy dodatkowy metr instalacji powyżej długości uwzględnionych w montażach podstawowych - ……………..</li>
+    </ul>
+
+    <p><strong>Stawki za kucie</strong></p>
+    <ul>
+      <li>Stawka za kucie w żelbecie, jeżeli zajdzie taka potrzeba - ……………..</li>
+      <li>Stawka za kucie w cegle lub w bloczku, jeżeli zajdzie taka potrzeba - ……………..</li>
+    </ul>
+
+    <p><strong>Stawki za tzw. przygotówkę (prace w mieszkaniu/domu stanie deweloperskim)</strong></p>
+    <ul>
+      <li>Stawka za jeden metr bieżący instalacji miedzianej wraz z materiałem (rury + przewód sterujący) - ……………..</li>
+      <li>Stawka za bruzdowanie w żelbecie – jeden metr bieżący - ……………..</li>
+      <li>Stawka za bruzdowanie w innych materiałach niż żelbeton – jeden metr bieżący - ……………..</li>
+    </ul>
+    <p>
+      Dzięki tym informacjom możemy jasno ustalić warunki współpracy, unikając nieporozumień i zbędnej wymiany
+      wiadomości.
+    </p>
+
+    <div class="section-title">12. Zakończenie współpracy</div>
+    <p>Zakończymy współpracę natychmiast, jeśli:</p>
+    <ul>
+      <li>podwykonawca wykona montaż w sposób zagrażający bezpieczeństwu klienta,</li>
+      <li>odmówi poprawek,</li>
+      <li>będzie utrudniał kontakt lub unikał odpowiedzialności,</li>
+      <li>straci nasze zaufanie,</li>
+      <li>działa niezgodnie z zasadami opisanymi w tym dokumencie.</li>
+    </ul>
+
+    <p>
+      Jeżeli zauważysz, że w powyższych zasadach czegoś brakuje, albo chcesz ze swojej strony doprecyzować jakieś
+      kwestie, ustalić dodatkowe warunki czy o coś dopytać proszę o kontakt.<br />
+      Chętnie wszystko omówię i ustalę tak, aby w przyszłości nie było żadnych nieporozumień, niedomówień ani
+      „przeciągania liny".<br />
+      Zależy mi na jasnej, partnerskiej współpracy i wzajemnym szacunku.
+    </p>
+
+        <div class="footer-note">
+          <p style="margin: 0; color: white;">
+            Bardzo proszę zapoznać się z całością zanim napiszesz.<br />
+            Dziękuję!
+          </p>
+          <p style="margin-top: 20px; font-size: 20px; font-weight: bold; color: white;">
+            Kontakt: 604-687-523
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
